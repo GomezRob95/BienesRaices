@@ -1,0 +1,146 @@
+html {
+    font-size: 62.5%;
+    /*Reset para REMS 62.5% = 10px de 16px*/
+}
+
+
+/*Fuentes*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/*Estilos globales*/
+
+.contenedor {
+    max-width: 120rem;
+    /* = 1200px*/
+    /*aniade un ancho maximo del navegador*/
+    margin: 0 auto 0 auto;
+    /*se brindan margenes de tipo reloj*/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+
+/*Utilidades*/
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+    /*tamanio de letra*/
+}
+
+.centrar-texto {
+    text-align: center;
+    /*alinea frase en el centro del navegador*/
+}
+
+
+/*Header*/
+
+.site-header.inicio {
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    /*permite mostrar la img desde el centro*/
+    background-size: cover;
+    /*fuerza a la img a tomar el espacio disponible tanto en alto como en ancho del navegador*/
+    height: 100vh;
+    /*esto permite adapartar img al tamanio de la pantalla*/
+    min-height: 60rem;
+    /*permite al achicar la pantalla a un tamanio definido para la pagina*/
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*esto es para posisionar el texto "venta de casas" en la img*/
+    justify-content: space-between;
+    /*permite poner el texto abajo del logo en la img*/
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    /*establece un borde en la frase*/
+    max-width: 60rem;
+    line-height: 2;
+    /*espacio entre separacion de frases*/
+}
+
+.barra {
+    display: flex;
+    /*psisiona el nav al costado*/
+    justify-content: space-between;
+    /*permite la separacion horizontal entre el logo y el nav*/
+    align-items: center;
+    /*permite aliniar el nav con el logo en el centro*/
+    padding-top: 3rem;
+    /*elimina espacio entre el logo y su techo*/
+}
+
+
+/*Navegacion*/
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    /*esto es para remover el subrayado del nav*/
+    font-size: 1.8rem;
+    /* = 18px*/
+    /*tamanio de letra*/
+    margin-right: 2rem;
+    /*espaciado entre las palabras del nav*/
+}
+
+.navegacion a:hover {
+    /*esto permite cambiar el color a las palabras del nav*/
+    color: yellowgreen;
+}
+
+.navegacion a:last-of-type {
+    /*esto es para sacar el ultimo espaciado del nav asi se ve mas prolijo el codigo*/
+    margin-right: 0px;
+}
+
+
+/*Iconos Nosotros*/
+
+.iconos-nosotros {
+    display: flex;
+    /*se pone esta propiedad para decir que estamos usando flexbox*/
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc (33.3% - 1rem);
+    /*establece un ancho de recuadros de iconos.*/
+    text-align: center;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+    /*tranforma el texto a mayusculas*/
+}
