@@ -98,6 +98,11 @@ h4 {
 
 /*Header*/
 
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
 .site-header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -363,4 +368,21 @@ h4 {
 .copyright {
     margin: 0;
     color: white;
+}
+
+
+/*Codigo para paginas internas*/
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /*permite poner el 50% para la img y el otro 50% para el texto*/
+    grid-column-gap: 2rem;
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 3rem 0;
 }
