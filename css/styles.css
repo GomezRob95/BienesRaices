@@ -1,6 +1,13 @@
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
     /*Reset para REMS 62.5% = 10px de 16px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 
@@ -14,6 +21,11 @@ body {
 
 
 /*Estilos globales*/
+
+img {
+    max-width: 100%;
+    /*permite que las img tengan este formato*/
+}
 
 .contenedor {
     max-width: 120rem;
@@ -55,6 +67,32 @@ h4 {
 .centrar-texto {
     text-align: center;
     /*alinea frase en el centro del navegador*/
+}
+
+.d-block {
+    display: block!important;
+}
+
+
+/*botones*/
+
+.boton {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-amarillo {
+    background-color: #E08709;
+}
+
+.boton-verde {
+    background-color: #71b100;
 }
 
 
@@ -135,7 +173,7 @@ h4 {
 }
 
 .icono {
-    flex-basis: calc (33.3% - 1rem);
+    flex-basis: calc(33.3% - 1rem);
     /*establece un ancho de recuadros de iconos.*/
     text-align: center;
 }
@@ -143,4 +181,79 @@ h4 {
 .icono h3 {
     text-transform: uppercase;
     /*tranforma el texto a mayusculas*/
+}
+
+
+/*Anuncios*/
+
+.contenedor-anuncios {
+    /*formato para imagenes del main*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.anuncio {
+    /*formato para imagenes del main*/
+    flex-basis: calc(33.3% - 1rem);
+    /*se aplican propiedades css a las tarjetas*/
+    border: 1px solid #B5B5B5;
+    background-color: #f5f5f5;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    /*ordena los textos de la tarjeta*/
+    margin: 0;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li {
+    /*flex: 1;*/
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/*Contacto home*/
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 1;
+    /*detecta el tamanio disponible, y cuantos elementos hay y los divide*/
+    color: white;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
 }
