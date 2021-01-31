@@ -28,6 +28,7 @@ img {
 }
 
 .contenedor {
+    width: 95%;
     max-width: 120rem;
     /* = 1200px*/
     /*aniade un ancho maximo del navegador*/
@@ -90,6 +91,15 @@ h4 {
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
 }
 
 .boton:hover {
@@ -131,6 +141,13 @@ h4 {
     /*esto es para posisionar el texto "venta de casas" en la img*/
     justify-content: space-between;
     /*permite poner el texto abajo del logo en la img*/
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
 }
 
 .contenido-header h1 {
@@ -143,14 +160,19 @@ h4 {
 }
 
 .barra {
-    display: flex;
-    /*psisiona el nav al costado*/
-    justify-content: space-between;
-    /*permite la separacion horizontal entre el logo y el nav*/
-    align-items: center;
-    /*permite aliniar el nav con el logo en el centro*/
     padding-top: 3rem;
     /*elimina espacio entre el logo y su techo*/
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        /*psisiona el nav al costado*/
+        justify-content: space-between;
+        /*permite la separacion horizontal entre el logo y el nav*/
+        align-items: center;
+        /*permite aliniar el nav con el logo en el centro*/
+    }
 }
 
 
@@ -160,11 +182,23 @@ h4 {
     color: white;
     text-decoration: none;
     /*esto es para remover el subrayado del nav*/
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     /* = 18px*/
     /*tamanio de letra*/
-    margin-right: 2rem;
-    /*espaciado entre las palabras del nav*/
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        /*espaciado entre las palabras del nav*/
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type {
+        /*esto es para sacar el ultimo espaciado del nav asi se ve mas prolijo el codigo*/
+        margin-right: 0px;
+    }
 }
 
 .navegacion a:hover {
@@ -172,24 +206,26 @@ h4 {
     color: yellowgreen;
 }
 
-.navegacion a:last-of-type {
-    /*esto es para sacar el ultimo espaciado del nav asi se ve mas prolijo el codigo*/
-    margin-right: 0px;
-}
-
 
 /*Iconos Nosotros*/
 
-.iconos-nosotros {
-    display: flex;
-    /*se pone esta propiedad para decir que estamos usando flexbox*/
-    justify-content: space-between;
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        /*se pone esta propiedad para decir que estamos usando flexbox*/
+        justify-content: space-between;
+    }
 }
 
 .icono {
-    flex-basis: calc(33.3% - 1rem);
-    /*establece un ancho de recuadros de iconos.*/
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+        /*establece un ancho de recuadros de iconos.*/
+    }
 }
 
 .icono h3 {
@@ -200,24 +236,31 @@ h4 {
 
 /*Anuncios*/
 
-.contenedor-anuncios {
-    /*formato para imagenes del main*/
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /*esto es para controlar la direccion de apilado de tarjetas 3 arriba de otras 3*/
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        /*formato para imagenes del main*/
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /*esto es para controlar la direccion de apilado de tarjetas 3 arriba de otras 3*/
+    }
 }
 
 .anuncio {
     flex-shrink: 0;
     /*para encojer contenido de las tarjetas tiene que estar en 0*/
     /*formato para imagenes del main*/
-    flex-basis: calc(33.3% - 1rem);
-    /*se aplican propiedades css a las tarjetas*/
     border: 1px solid #B5B5B5;
     background-color: #f5f5f5;
     margin-bottom: 2rem;
     /*para dar separacion a las tarjetas*/
+}
+
+@media (min-width: 768px) {
+    .anuncio {
+        flex-basis: calc(33.3% - 1rem);
+        /*se aplican propiedades css a las tarjetas*/
+    }
 }
 
 .contenido-anuncio {
@@ -271,7 +314,7 @@ h4 {
 }
 
 .contenido-contacto {
-    flex: 1;
+    flex: 0 0 95%;
     /*detecta el tamanio disponible, y cuantos elementos hay y los divide*/
     color: white;
 }
@@ -283,36 +326,42 @@ h4 {
 
 /*Seccion inferior*/
 
-.seccion-inferior {
-    display: flex;
-    justify-content: space-between;
-}
-
-.seccion-inferior .blog {
-    flex-basis: 60%;
-}
-
-.seccion-inferior .testimoniales {
-    flex-basis: calc(40% - 2rem);
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
 }
 
 .entrada-blog {
-    display: flex;
-    /*espacio entre imagen y texto*/
-    justify-content: space-between;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        /*espacio entre imagen y texto*/
+        justify-content: space-between;
+    }
 }
 
 .entrada-blog:last-of-type {
     margin-bottom: 0;
 }
 
-.entrada-blog .imagen {
-    flex-basis: 40%;
-}
-
-.entrada-blog .texto-entrada {
-    flex-basis: calc(60% - 3rem);
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+    }
 }
 
 .texto-entrada a {
@@ -378,8 +427,24 @@ h4 {
 
 .contenedor-footer {
     padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
 }
 
 .copyright {
@@ -390,11 +455,13 @@ h4 {
 
 /*Codigo para paginas internas*/
 
-.contenido-nosotros {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    /*permite poner el 50% para la img y el otro 50% para el texto*/
-    grid-column-gap: 2rem;
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /*permite poner el 50% para la img y el otro 50% para el texto*/
+        grid-column-gap: 2rem;
+    }
 }
 
 .texto-nosotros blockquote {
